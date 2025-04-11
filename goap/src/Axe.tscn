@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3mctg3xisx04"]
+
+[ext_resource type="Script" uid="uid://clx5tybq52kn" path="res://src/axe.gd" id="1_pttu1"]
+[ext_resource type="Texture2D" uid="uid://nvmuqgko1fj3" path="res://assets/colored-transparent_packed.png" id="2_t560c"]
+
+[node name="Axe" type="Node2D" groups=["axes", "objects"]]
+script = ExtResource("1_pttu1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_t560c")
+region_enabled = true
+region_rect = Rect2(672, 112, 16, 16)

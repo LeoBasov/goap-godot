@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://cwtftsc4kxkkw"]
+[gd_scene load_steps=9 format=4 uid="uid://cwtftsc4kxkkw"]
 
 [ext_resource type="Texture2D" uid="uid://bgv2aqnmso4j8" path="res://assets/colored_packed.png" id="1_dsqel"]
 [ext_resource type="Script" uid="uid://b6d3mm271um6l" path="res://level/test_level.gd" id="1_owtjd"]
 [ext_resource type="PackedScene" uid="uid://554oo0kvo5kp" path="res://src/dwarf.tscn" id="2_s65ib"]
 [ext_resource type="PackedScene" uid="uid://2or41gy0h4ou" path="res://src/wood.tscn" id="2_w72v2"]
 [ext_resource type="PackedScene" uid="uid://b8y07vjgv75b4" path="res://src/stone.tscn" id="5_22gpc"]
+[ext_resource type="PackedScene" uid="uid://d3mctg3xisx04" path="res://src/Axe.tscn" id="6_xowea"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s65ib"]
 texture = ExtResource("1_dsqel")
@@ -1106,3 +1107,6 @@ position = Vector2(496, 336)
 
 [node name="Stone" parent="." instance=ExtResource("5_22gpc")]
 position = Vector2(461, 270)
+
+[node name="Axe" parent="." instance=ExtResource("6_xowea")]
+position = Vector2(335, 111)
