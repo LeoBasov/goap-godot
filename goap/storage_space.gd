@@ -26,15 +26,16 @@ func _init() -> void:
 	reverse_options_map[Options.STONE] = "stone"
 	reverse_options_map[Options.WOOD] = "wood"
 	
+	sprite_map[Options.EMPTY] = Rect2(368.0, 64.0, w, h)
 	sprite_map[Options.AXE] = Rect2(672.0, 112.0, w, h)
 	sprite_map[Options.STONE] = Rect2(0, 0, w, h)
 	sprite_map[Options.WOOD] = Rect2(0, 0, w, h)
 	
 func check_state():
 	if current_object == Options.EMPTY:
+		$Sprite2D.region_rect = sprite_map[current_object]
 		$Sprite2D.hide()
 	else:
-		print($Sprite2D.region_rect)
 		$Sprite2D.region_rect = sprite_map[current_object]
 		$Sprite2D.show()
 
@@ -48,3 +49,11 @@ func empty():
 	
 func get_current_object():
 	return reverse_options_map[current_object]
+
+
+func _on_area_2d_mouse_entered() -> void:
+	$Sprite2D.show()
+
+func _on_area_2d_mouse_exited() -> void:
+	if current_object == Options.EMPTY:
+		$Sprite2D.hide()
