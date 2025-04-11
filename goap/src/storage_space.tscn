@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://cmyxb4updtvq" path="res://storage_space.gd" id="1_etaoc"]
 [ext_resource type="Texture2D" uid="uid://nvmuqgko1fj3" path="res://assets/colored-transparent_packed.png" id="2_tn1xr"]
 
-[node name="StorageSpace" type="Node2D"]
+[node name="StorageSpace" type="Node2D" groups=["objects"]]
 script = ExtResource("1_etaoc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
 texture = ExtResource("2_tn1xr")
 region_enabled = true
-region_rect = Rect2(0, 0, 16, 16)
+region_rect = Rect2(368, 64, 16, 16)

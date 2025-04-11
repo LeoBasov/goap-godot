@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://554oo0kvo5kp" path="res://src/dwarf.tscn" id="2_s65ib"]
 [ext_resource type="PackedScene" uid="uid://2or41gy0h4ou" path="res://src/wood.tscn" id="2_w72v2"]
 [ext_resource type="PackedScene" uid="uid://b8y07vjgv75b4" path="res://src/stone.tscn" id="5_22gpc"]
-[ext_resource type="PackedScene" uid="uid://d3mctg3xisx04" path="res://src/Axe.tscn" id="6_xowea"]
+[ext_resource type="PackedScene" uid="uid://bb6mpsoduub85" path="res://src/storage_space.tscn" id="6_xowea"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s65ib"]
 texture = ExtResource("1_dsqel")
@@ -1108,5 +1108,23 @@ position = Vector2(496, 336)
 [node name="Stone" parent="." instance=ExtResource("5_22gpc")]
 position = Vector2(461, 270)
 
-[node name="Axe" parent="." instance=ExtResource("6_xowea")]
-position = Vector2(335, 111)
+[node name="Storage" type="Node2D" parent="."]
+
+[node name="StorageSpace" parent="Storage" instance=ExtResource("6_xowea")]
+position = Vector2(432, 433)
+
+[node name="StorageSpace2" parent="Storage" instance=ExtResource("6_xowea")]
+position = Vector2(463, 435)
+current_object = 1
+
+[node name="StorageSpace3" parent="Storage" instance=ExtResource("6_xowea")]
+position = Vector2(532, 440)
+
+[node name="StorageSpace4" parent="Storage" instance=ExtResource("6_xowea")]
+position = Vector2(564, 458)
+
+[node name="StorageSpace5" parent="Storage" instance=ExtResource("6_xowea")]
+position = Vector2(532, 462)
+
+[node name="StorageSpace6" parent="Storage" instance=ExtResource("6_xowea")]
+position = Vector2(565, 437)
