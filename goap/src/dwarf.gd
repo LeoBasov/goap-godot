@@ -3,6 +3,7 @@ extends Node2D
 var agent : Agent = Agent.new()
 var speed : float  = 200.0
 var has_axe = false
+var has_wood = false
 
 func _ready() -> void:
 	agent.object = self

@@ -23,6 +23,7 @@ func execute(delta: float):
 		object.moveto(axe.position, delta)
 		return false
 	else:
+		object.has_axe = true
 		axe.empty()
 		axe = null
 		return true
