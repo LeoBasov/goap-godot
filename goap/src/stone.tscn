@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8y07vjgv75b4"]
+
+[ext_resource type="Texture2D" uid="uid://nvmuqgko1fj3" path="res://assets/colored-transparent_packed.png" id="1_4otaq"]
+[ext_resource type="Script" uid="uid://b1wd85yio273i" path="res://src/stone.gd" id="1_vfd6k"]
+
+[node name="Stone" type="Node2D" groups=["objects"]]
+script = ExtResource("1_vfd6k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_4otaq")
+region_enabled = true
+region_rect = Rect2(80, 32, 16, 16)

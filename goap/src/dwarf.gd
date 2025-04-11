@@ -1,6 +1,6 @@
 extends Node2D
 
-var agent : GoapAgent = GoapAgent.new()
+var agent : Agent = Agent.new()
 var speed : float  = 1.0
 
 func _ready() -> void:
