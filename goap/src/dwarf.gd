@@ -17,12 +17,16 @@ func moveto(target: Vector2, delta: float):
 
 func set_axe(state: bool):
 	if state:
+		has_axe  = state
 		$CarrySprite.set_object("axe")
 	else:
+		has_axe  = state
 		$CarrySprite.empty()
 		
 func set_wood(state: bool):
 	if state:
+		has_wood = state
 		$CarrySprite.set_object("wood")
 	else:
+		has_wood = state
 		$CarrySprite.empty()
