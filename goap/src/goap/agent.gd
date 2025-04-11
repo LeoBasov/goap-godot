@@ -21,10 +21,11 @@ func set_object(obj):
 		action.object = obj
 	
 func update_state():
-	if object.get_tree().get_nodes_in_group("axes").size() > 0:
-		state["axe_exists"] = true
-	else:
-		state["axe_exists"] = false
+	state["axe_exists"] = false
+	
+	for space in object.get_tree().get_nodes_in_group("storage"):
+		if space.get_current_object() == "axe":
+			state["axe_exists"] = true
 		
 	state["has_axe"] = object.has_axe
 
