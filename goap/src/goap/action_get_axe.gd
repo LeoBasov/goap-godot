@@ -8,7 +8,7 @@ func _init() -> void:
 	
 	result["has_axe"] = true
 
-func execute():
+func execute(delta: float):
 	if axe == null:
 		var dist_min = 1e6
 		for ax in object.get_tree().get_nodes_in_group("axes"):
@@ -20,7 +20,7 @@ func execute():
 				axe = ax
 				
 	if (axe.position - object.position).length() > 1:
-		object.moveto(axe.position)
+		object.moveto(axe.position, delta)
 		return false
 	else:
 		axe.queue_free()

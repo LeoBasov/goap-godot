@@ -26,5 +26,5 @@ func check_goal(state : Dictionary) -> bool:
 		
 	return check
 
-func execute():
+func execute(delta: float):
 	pass

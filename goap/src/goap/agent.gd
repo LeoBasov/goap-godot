@@ -36,18 +36,16 @@ func make_plan() -> void:
 	
 	for action in actions:
 		if action.check_goal(goal):
-			print("goal met")
 			if action.check_preconditions(state):
-				print("preconditons met")
 				plan.append(action)
 				current_action = plan.pop_back()
 				break
 			else:
-				print("preconditons not met")
+				pass
 
-func exec_plan():
+func exec_plan(delta: float):
 	if current_action == null:
 		make_plan()
 	else:
-		if current_action.execute():
+		if current_action.execute(delta):
 			current_action = null
