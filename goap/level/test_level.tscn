@@ -1128,3 +1128,4 @@ position = Vector2(532, 462)
 
 [node name="StorageSpace6" parent="Storage" instance=ExtResource("6_xowea")]
 position = Vector2(565, 437)
+current_object = 1

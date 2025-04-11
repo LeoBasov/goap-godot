@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://554oo0kvo5kp"]
+[gd_scene load_steps=5 format=3 uid="uid://554oo0kvo5kp"]
 
 [ext_resource type="Script" uid="uid://bx4q0dikv1v8v" path="res://src/dwarf.gd" id="1_2xmiu"]
 [ext_resource type="Texture2D" uid="uid://cpmveh1v8rsvw" path="res://assets/dwarf.png" id="1_jcu87"]
+[ext_resource type="Texture2D" uid="uid://nvmuqgko1fj3" path="res://assets/colored-transparent_packed.png" id="3_1y6d8"]
+[ext_resource type="Script" uid="uid://u7k0rq2g0sd8" path="res://src/carry_sprite.gd" id="4_55a5q"]
 
 [node name="Dwarf" type="Node2D"]
 script = ExtResource("1_2xmiu")
@@ -10,3 +12,10 @@ script = ExtResource("1_2xmiu")
 scale = Vector2(2, 2)
 texture = ExtResource("1_jcu87")
 region_rect = Rect2(16, 16, 16, 16)
+
+[node name="CarrySprite" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("3_1y6d8")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+script = ExtResource("4_55a5q")
