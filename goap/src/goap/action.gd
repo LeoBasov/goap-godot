@@ -18,8 +18,8 @@ func check_preconditions(state : Dictionary) -> bool:
 func check_goal(state : Dictionary) -> bool:
 	var check = true
 	
-	for key in result:
-		if key not in state:
+	for key in state:
+		if key not in result:
 			return false
 		else:
 			check = check and (result[key] == state[key])

@@ -10,6 +10,7 @@ var current_action = null
 func _init() -> void:
 	actions.append(ActionGetAxe.new())
 	actions.append(ActionCutTree.new())
+	actions.append(ActionStoreItem.new())
 	
 	state["axe_exists"] = false
 	state["has_axe"] = false
@@ -36,7 +37,7 @@ func update_state():
 
 func make_plan() -> void:
 	plan = []
-	var goal = {"has_wood" : true}
+	var goal = {"store_item" : true}
 	
 	update_state()
 	
