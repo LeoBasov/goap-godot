@@ -18,13 +18,27 @@ func build_tree(goal : Dictionary, state : Dictionary, actions : Array):
 			root = create_node(null, action)
 			
 	add_children(root, state, actions)
+	
+func check_action_dublicates(node : GoapTreeNode, action: Action) -> bool:
+	if node.action == action:
+			return true
+	
+	var parent = node.parent
+			
+	while parent != null:
+		if parent.action == action:
+			return true
+		else:
+			parent = node.parent
+			
+	return false
 
 func add_children(node: GoapTreeNode, state : Dictionary, actions : Array):
 	if node.action.check_preconditions(state):
 		return
 		
 	for action in actions:
-		if node.action == action:
+		if check_action_dublicates(node, action):
 			continue
 		elif check_child_conditions(action, state, node.action.precondition):
 			node.children.append(create_node(node, action))
