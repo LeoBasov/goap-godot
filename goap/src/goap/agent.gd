@@ -6,6 +6,7 @@ var actions = []
 var action_do_nothing = ActionDoNoting.new()
 var state = Dictionary()
 var current_action = null
+var tree = GoapTree.new()
 
 func _init() -> void:
 	actions.append(ActionGetAxe.new())
@@ -58,10 +59,20 @@ func make_plan() -> void:
 					dummy_state[substate] = action.result[substate]
 				
 				plan.append(action)
+				
+func make_tree_plan():
+	plan = []
+	var goal = {"store_item" : true}
+	
+	update_state()
+	tree.build_tree(goal,state, actions)
+	
+	# get actual plan
 
 func exec_plan(delta: float):
 	if current_action == null:
-		make_plan()
+		#make_plan()
+		make_tree_plan()
 	else:
 		if current_action.execute(delta):
 			current_action = plan.pop_front()

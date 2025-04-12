@@ -28,3 +28,11 @@ func check_goal(state : Dictionary) -> bool:
 
 func execute(delta: float):
 	pass
+
+func get_post_state():
+	var post_state = precondition.duplicate(true)
+	
+	for res in result:
+		post_state[res] = result[res]
+			
+	return post_state
