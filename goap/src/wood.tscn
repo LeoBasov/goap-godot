@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://2or41gy0h4ou"]
+
+[ext_resource type="Texture2D" uid="uid://nvmuqgko1fj3" path="res://assets/colored-transparent_packed.png" id="1_mrmta"]
+[ext_resource type="Script" uid="uid://bg65l6lgx3hop" path="res://src/wood.gd" id="1_tch67"]
+
+[node name="Wood" type="Node2D" groups=["objects", "trees"]]
+script = ExtResource("1_tch67")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_mrmta")
+region_enabled = true
+region_rect = Rect2(0, 16, 16, 16)
