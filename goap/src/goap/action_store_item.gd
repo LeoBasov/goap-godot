@@ -3,6 +3,7 @@ class_name ActionStoreItem extends Action
 var storage = null
 
 func _init() -> void:
+	precondition["free_storage"] = true
 	precondition["has_wood"] = true
 	
 	result["store_item"] = true
@@ -17,6 +18,9 @@ func execute(delta: float):
 			if str.get_current_object() == "empty" and dist < dist_min:
 				dist_min = dist
 				storage = str
+				
+	if storage == null:
+		return true
 				
 	if (storage.position - object.position).length() > 1:
 		object.moveto(storage.position, delta)

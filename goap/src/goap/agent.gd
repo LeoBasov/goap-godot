@@ -16,6 +16,7 @@ func _init() -> void:
 	state["has_axe"] = false
 	state["tree_exist"] = false
 	state["has_wood"] = false
+	state["free_storage"] = false
 	
 func set_object(obj):
 	object = obj
@@ -26,11 +27,14 @@ func set_object(obj):
 	
 func update_state():
 	state["axe_exists"] = false
+	state["free_storage"] = false
 	state["tree_exist"] = object.get_tree().get_nodes_in_group("trees").size() > 0
 	
 	for space in object.get_tree().get_nodes_in_group("storage"):
 		if space.get_current_object() == "axe":
 			state["axe_exists"] = true
+		elif space.get_current_object() == "empty":
+			state["free_storage"] = true
 		
 	state["has_axe"] = object.has_axe
 	state["has_wood"] = object.has_wood
