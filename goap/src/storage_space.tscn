@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://nvmuqgko1fj3" path="res://assets/colored-transparent_packed.png" id="2_tn1xr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tn1xr"]
-size = Vector2(30, 32)
+size = Vector2(32, 32)
 
 [node name="StorageSpace" type="Node2D" groups=["objects", "storage"]]
 script = ExtResource("1_etaoc")
