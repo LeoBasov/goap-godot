@@ -38,7 +38,7 @@ func add_children(node: GoapTreeNode, state : Dictionary, actions : Array):
 		return
 		
 	for action in actions:
-		if check_action_dublicates(node, action):
+		if node.action == action:
 			continue
 		elif check_child_conditions(action, state, node.action.precondition):
 			node.children.append(create_node(node, action))

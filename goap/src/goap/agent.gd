@@ -67,12 +67,21 @@ func make_tree_plan():
 	update_state()
 	tree.build_tree(goal,state, actions)
 	
-	# get actual plan
+	plan.append(tree.root)
+	get_children_of_node(tree.root, plan)
+	
+	current_action = plan.pop_back()
+	
+func get_children_of_node(node, plan):
+	for child in node.children:
+		plan.append(child)
+		get_children_of_node(child, plan)
+		break
 
 func exec_plan(delta: float):
 	if current_action == null:
 		#make_plan()
 		make_tree_plan()
 	else:
-		if current_action.execute(delta):
-			current_action = plan.pop_front()
+		if current_action.action.execute(delta):
+			current_action = plan.pop_back()
