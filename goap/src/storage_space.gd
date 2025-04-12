@@ -28,7 +28,7 @@ func _init() -> void:
 	
 	sprite_map[Options.EMPTY] = Rect2(368.0, 64.0, w, h)
 	sprite_map[Options.AXE] = Rect2(672.0, 112.0, w, h)
-	sprite_map[Options.STONE] = Rect2(0, 0, w, h)
+	sprite_map[Options.STONE] = Rect2(80, 32, w, h)
 	sprite_map[Options.WOOD] = Rect2(592, 32, w, h)
 	
 func check_state():

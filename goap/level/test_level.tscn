@@ -1111,22 +1111,22 @@ position = Vector2(461, 270)
 [node name="Storage" type="Node2D" parent="."]
 
 [node name="StorageSpace" parent="Storage" instance=ExtResource("6_xowea")]
-position = Vector2(432, 433)
+position = Vector2(432, 432)
 current_object = 1
 
 [node name="StorageSpace2" parent="Storage" instance=ExtResource("6_xowea")]
-position = Vector2(463, 435)
+position = Vector2(464, 432)
 current_object = 1
 
 [node name="StorageSpace3" parent="Storage" instance=ExtResource("6_xowea")]
-position = Vector2(532, 440)
+position = Vector2(528, 432)
 
 [node name="StorageSpace4" parent="Storage" instance=ExtResource("6_xowea")]
-position = Vector2(564, 458)
+position = Vector2(560, 464)
 
 [node name="StorageSpace5" parent="Storage" instance=ExtResource("6_xowea")]
-position = Vector2(532, 462)
+position = Vector2(528, 464)
 
 [node name="StorageSpace6" parent="Storage" instance=ExtResource("6_xowea")]
-position = Vector2(565, 437)
+position = Vector2(560, 432)
 current_object = 1
